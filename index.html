@@ -1,1 +1,43 @@
-eitan is the man
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #surpriseMessage {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the Button for a Surprise!</h1>
+    <button onclick="showSurprise()">Surprise Me</button>
+    <div id="surpriseMessage"></div>
+
+    <script>
+        function showSurprise() {
+            const messages = [
+                "🎉 You've won a million dollars!",
+                "🌟 You're amazing just the way you are!",
+                "🚀 Keep reaching for the stars!",
+                "🎨 Creativity is intelligence having fun!",
+                "🌈 Every day is a new adventure!"
+            ];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById('surpriseMessage').textContent = messages[randomIndex];
+        }
+    </script>
+</body>
+</html>
