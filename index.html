@@ -10,10 +10,6 @@
             text-align: center;
             margin-top: 50px;
         }
-        #surpriseMessage {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
         button {
             padding: 10px 20px;
             font-size: 1em;
@@ -23,26 +19,11 @@
 </head>
 <body>
     <h1>Click the Button for a Surprise!</h1>
-    <button onclick="handleButtonClick()">Surprise Me</button>
-    <div id="surpriseMessage"></div>
+    <button onclick="redirectToUrl()">Surprise Me</button>
 
     <script>
-        function showSurprise() {
-            const messages = [
-                "🎉 You've won a million dollars!",
-                "🌟 You're amazing just the way you are!",
-                "🚀 Keep reaching for the stars!",
-                "🎨 Creativity is intelligence having fun!",
-                "🌈 Every day is a new adventure!"
-            ];
-            const randomIndex = Math.floor(Math.random() * messages.length);
-            document.getElementById('surpriseMessage').textContent = messages[randomIndex];
-        }
-
-        function handleButtonClick() {
-            showSurprise();  // Show the surprise message
-
-            // After showing the surprise, redirect to the URL
+        function redirectToUrl() {
+            // Redirect to the specified URL
             window.location.href = "https://raw.githubusercontent.com/eitans101/test1/main/download.jfif";
         }
     </script>
