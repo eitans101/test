@@ -23,7 +23,7 @@
 </head>
 <body>
     <h1>Click the Button for a Surprise!</h1>
-    <button onclick="showSurprise()">Surprise Me</button>
+    <button onclick="handleButtonClick()">Surprise Me</button>
     <div id="surpriseMessage"></div>
 
     <script>
@@ -37,6 +37,13 @@
             ];
             const randomIndex = Math.floor(Math.random() * messages.length);
             document.getElementById('surpriseMessage').textContent = messages[randomIndex];
+        }
+
+        function handleButtonClick() {
+            showSurprise();  // Show the surprise message
+
+            // After showing the surprise, redirect to the URL
+            window.location.href = "https://raw.githubusercontent.com/eitans101/test1/main/download.jfif";
         }
     </script>
 </body>
